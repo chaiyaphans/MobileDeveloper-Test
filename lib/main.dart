@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Timer.periodic(
-        const Duration(seconds: 10),
+        const Duration(seconds: 60),
         (Timer t) => setState(() {
               getDataBTC();
             }));
