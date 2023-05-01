@@ -4,24 +4,24 @@
 
 import 'dart:convert';
 
-CurrencyRate currencyRateFromJson(String str) => CurrencyRate.fromJson(json.decode(str));
+CurrencyRateModel currencyRateFromJson(String str) => CurrencyRateModel.fromJson(json.decode(str));
 
-String currencyRateToJson(CurrencyRate data) => json.encode(data.toJson());
+String currencyRateToJson(CurrencyRateModel data) => json.encode(data.toJson());
 
-class CurrencyRate {
+class CurrencyRateModel {
   Time? time;
   String? disclaimer;
   String? chartName;
   Bpi? bpi;
 
-  CurrencyRate({
+  CurrencyRateModel({
     this.time,
     this.disclaimer,
     this.chartName,
     this.bpi,
   });
 
-  factory CurrencyRate.fromJson(Map<String, dynamic> json) => CurrencyRate(
+  factory CurrencyRateModel.fromJson(Map<String, dynamic> json) => CurrencyRateModel(
         time: json["time"] == null ? null : Time.fromJson(json["time"]),
         disclaimer: json["disclaimer"],
         chartName: json["chartName"],
